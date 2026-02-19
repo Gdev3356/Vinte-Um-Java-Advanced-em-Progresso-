@@ -11,7 +11,12 @@ public class Carta {
 
     }
 
-    public String imagePath(){
+    public String imagePath() {
+        String prefixo = numero + "";
+        if (numero == 1) prefixo = "Ace";
+        if (numero == 11) prefixo = "Jack";
+        if (numero == 13) prefixo = "King";
+
         return "classic-cards/" + numero + naipe + ".png";
     }
 
